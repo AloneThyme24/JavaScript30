@@ -91,6 +91,21 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+      
+      const transportationCount = data.reduce((accumulator, currentItem) => {
+  // If the item already exists, increment it
+        if (accumulator[currentItem]) {
+          accumulator[currentItem]++;
+        } else {
+    // If it doesn't exist yet, initialize it to 1
+          accumulator[currentItem] = 1;
+  }
+
+  // Always return the updated accumulator
+      return accumulator;
+    }, {});
+
+    console.log(transportationCount);
 
   </script>
 </body>
